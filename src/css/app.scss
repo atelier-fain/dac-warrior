@@ -1,1 +1,97 @@
-// app global css in SCSS form
+@font-face {
+  font-family: 'Norse';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/Norse.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Norse';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../assets/fonts/Norsebold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/Montserrat-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../assets/fonts/Montserrat-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/Montserrat-Regular.ttf') format('woff');
+}
+
+
+
+
+html, body {
+
+}
+
+
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+h1 {
+  margin: 0;
+  line-height: 120%;
+  font-size: 70px;
+  font-family: 'Norse', sans-serif;
+  font-weight: 900;
+  display: block;
+}
+h2 {
+  margin: 0;
+  line-height: 120%;
+  font-size: 60px;
+  font-family: 'Norse', sans-serif;
+  font-weight: 900;
+  display: block;
+}
+
+.font-norse {
+  font-family: 'Norse', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0;
+}
+
+
+.q-menu:has(.list-lang-dropdown) {
+  //backdrop-filter: blur(10px);
+  //background: unset;
+
+}

@@ -1,0 +1,21 @@
+<svg viewBox="0 0 32 25.21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="25.209961" fill="none" customFrame="#000000">
+	<defs>
+		<filter id="pixso_custom_mask_type_outline">
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
+		</filter>
+	</defs>
+	<mask id="mask_28" width="32.000000" height="25.209486" x="0.000000" y="0.000000" maskUnits="userSpaceOnUse">
+		<g filter="url(#pixso_custom_mask_type_outline)">
+			<g>
+				<rect id="Rectangle 86" width="32.000000" height="25.209486" x="0.000000" y="0.000000" fill="rgb(255,255,255)" />
+			</g>
+		</g>
+	</mask>
+	<g id="Group 107">
+		<g id="Group 106" mask="url(#mask_28)">
+			<g style="mix-blend-mode:normal">
+				<path id="Path 1085" d="M22.9616 25.0971L15.7965 18.6888L12.5483 22.4183C12.2809 22.7254 11.7756 22.5363 11.7756 22.129L11.7756 15.3139C11.7756 15.1748 11.8414 15.0438 11.9529 14.9607L25.3996 4.93895C25.4564 4.89664 25.4037 4.8086 25.3396 4.83856L8.58949 12.6638C8.47557 12.717 8.3443 12.719 8.2288 12.6692L0.266336 9.24037C-0.11707 9.07527 -0.0771844 8.51916 0.325833 8.41045L31.4441 0.0157529C31.7846 -0.07611 32.0896 0.249559 31.9757 0.583387L23.6722 24.9111C23.5703 25.2096 23.1968 25.3074 22.9616 25.0971Z" fill="rgb(255,211,52)" fill-rule="nonzero" />
+			</g>
+		</g>
+	</g>
+</svg>
