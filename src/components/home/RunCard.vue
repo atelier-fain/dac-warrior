@@ -101,7 +101,6 @@ const props = defineProps({
     transform: translateY(-50%);
     .q-btn__content {
       text-transform: uppercase;
-      font-size: 20px;
     }
   }
 }

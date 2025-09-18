@@ -1,5 +1,5 @@
 <template>
-  <div class="section-3">
+  <div class="section-3-home">
     <div class="container">
       <div class="list">
         <RunCard
@@ -29,11 +29,11 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
-.section-3 {
+.section-3-home {
   background-color: #2F2F2F;
   background-image: url('../../assets/overlay.png');
   //background-repeat: repeat-y;
-  background-position: top; /* sau center, bottom */
+  background-position: top;
   background-size: auto;
   width: 100%;
   height: 100%;

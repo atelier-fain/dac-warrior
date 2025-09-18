@@ -1,5 +1,5 @@
 <template>
-  <div class="section-9">
+  <div class="section-9-home">
     <q-img
       class="bg-image"
       src="../../assets/bg-s9.png"
@@ -40,7 +40,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
-.section-9 {
+.section-9-home {
   background-image: url('../../assets/overlay-section.png');
   background-size: cover;
   background-repeat: no-repeat;

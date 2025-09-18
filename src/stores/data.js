@@ -108,6 +108,212 @@ export const useDataStore = defineStore('data', {
         id: 'i4'
       }
     ],
+    experiences: {
+      listS2: [
+        {
+          id: 'c1',
+          img: 'paine.svg',
+          p: 2
+        },
+        {
+          id: 'c2',
+          img: 'struguri.svg',
+          p: 2
+        },
+        {
+          id: 'c3',
+          img: 'munte.svg',
+          p: 4
+        }
+      ],
+      sectionCard: {
+        listSectionTop: [
+          {
+            id: 'c1'
+          },
+          {
+            id: 'c2'
+          },
+          {
+            id: 'c3'
+          },
+          {
+            id: 'c4'
+          },
+          {
+            id: 'c5'
+          },
+          {
+            id: 'c6'
+          }
+        ],
+        sectionSchedule: {
+          friday: [
+            {
+              id: 's1',
+            },
+            {
+              id: 's2'
+            }
+          ],
+          saturday: [
+            {
+              id: 's1',
+              p: 1
+            },
+            {
+              id: 's2',
+              p: 1
+            },
+            {
+              id: 's3',
+              p: 3
+            },
+            {
+              id: 's4',
+              p: 3
+            },
+            {
+              id: 's5',
+              p: 1
+            },
+            {
+              id: 's6',
+              p: 4
+            },
+            {
+              id: 's7',
+              p: 3
+            }
+          ],
+          sunday: [
+            {
+              id: 's1',
+            },
+            {
+              id: 's2'
+            }
+          ],
+        },
+        info: [
+          {
+            id: 'c1'
+          },
+          {
+            id: 'c2'
+          },
+          {
+            id: 'c3'
+          },
+          {
+            id: 'c4'
+          },
+          {
+            id: 'c5'
+          },
+        ]
+      },
+      s3: {
+        card_a: {
+          saturday: [
+            {
+              id: 's1',
+              p: 1
+            },
+            {
+              id: 's2',
+              p: 1
+            },
+            {
+              id: 's3',
+              p: 3
+            },
+            {
+              id: 's4',
+              p: 3
+            },
+            {
+              id: 's5',
+              p: 1
+            },
+            {
+              id: 's6',
+              p: 1
+            }
+          ]
+        },
+        card_b: {
+          list: [
+            {
+              id: 'c1'
+            },
+            {
+              id: 'c2'
+            },
+            {
+              id: 'c3'
+            },
+            {
+              id: 'c4'
+            },
+            {
+              id: 'c5'
+            },
+            {
+              id: 'c6'
+            },
+            {
+              id: 'c7'
+            },
+            {
+              id: 'c8'
+            }
+          ],
+          friday: [
+            {
+              id: 's1'
+            },
+            {
+              id: 's2'
+            },
+            {
+              id: 's3'
+            },
+            {
+              id: 's4'
+            }
+          ],
+          saturday: [
+            {
+              id: 's1'
+            },
+            {
+              id: 's2'
+            },
+            {
+              id: 's3'
+            },
+            {
+              id: 's4'
+            }
+          ],
+          sunday: [
+            {
+              id: 's1'
+            },
+            {
+              id: 's2'
+            },
+            {
+              id: 's3'
+            },
+            {
+              id: 's4'
+            }
+          ],
+        }
+      }
+    }
   }),
   getters: {},
   actions: {}

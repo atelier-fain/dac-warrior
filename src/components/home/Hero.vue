@@ -1,12 +1,12 @@
 <template>
-  <div class="hero-section">
+  <div class="hero-section-home">
     <video preload="auto"
            autoplay
            loop
            muted
            playsinline
            class="bg-video">
-      <source src="../../assets/videos/2.mp4"
+      <source src="../../assets/videos/montaj intro.mp4"
               type="video/mp4">
     </video>
     <div class="container">
@@ -39,7 +39,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
-.hero-section {
+.hero-section-home {
   background-image: url('../../assets/overlay.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,7 +73,6 @@ const props = defineProps({
       .secondary-title {
         font-size: 40px;
         text-transform: uppercase;
-        margin-bottom: 25px;
         display: block;
       }
       .subtitle {

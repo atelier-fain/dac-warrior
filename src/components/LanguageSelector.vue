@@ -106,7 +106,7 @@ function handleSelected (id) {
       > span {
         color: black;
         font-size: 16px;
-        font-weight: 700;
+        font-weight: 900;
         text-transform: uppercase;
       }
       .selected-lang {
