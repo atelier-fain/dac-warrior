@@ -27,6 +27,7 @@ const content = computed(() => storeContent.localizedContent?.experiencesPage)
 
 <style lang="scss">
 .experiences-page {
+  overflow: hidden;
 
 }
 

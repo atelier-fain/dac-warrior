@@ -39,9 +39,10 @@ const props = defineProps({
   background-position: center;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
   display: flex;
   position: relative;
+  padding-bottom: 80px;
   .bg-video {
     position: absolute;
     top: 0;

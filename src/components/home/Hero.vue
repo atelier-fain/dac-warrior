@@ -89,6 +89,8 @@ const props = defineProps({
         }
         .subtitle {
           font-size: 16px;
+          display: block;
+          text-align: center;
         }
 
       }
