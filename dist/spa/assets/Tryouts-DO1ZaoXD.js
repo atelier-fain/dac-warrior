@@ -1,1 +1,0 @@
-import{_ as t}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{Y as e,Z as o}from"./index-DM_a8dXb.js";const r={},s={class:"tryouts-page"};function c(n,_){return o(),e("div",s)}const i=t(r,[["render",c]]);export{i as default};

@@ -8,9 +8,18 @@ import axios from 'axios'
 // "export default () => {}" function below (which runs individually
 // for each client)
 const api = axios.create({ baseURL: 'https://api.example.com' })
+let IMGS_BASE_URL
 
 export default defineBoot(({ app }) => {
   // for use inside Vue files (Options API) through this.$axios and this.$api
+  const hostname = window.location.hostname
+  console.log(hostname)
+  IMGS_BASE_URL =
+    process.env.NODE_ENV === 'production'
+      ? hostname === 'atelier-fain.github.io'
+        ? '/dac-warrior/'
+        : '/'
+      : '/'
 
   app.config.globalProperties.$axios = axios
   // ^ ^ ^ this will allow you to use this.$axios (for Vue Options API form)
