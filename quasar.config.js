@@ -40,9 +40,6 @@ export default defineConfig((ctx) => {
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
       publicPath: ctx.prod ? '/dac-warrior/' : '/',
-      vite: {
-        base: ctx.prod ? '/dac-warrior/' : '/',
-      }
       // analyze: true,
       // env: {},
       // rawDefine: {}

@@ -16,6 +16,7 @@
       </div>
       <div class="bottom">
         <q-img
+          v-if="icon"
           class="icon"
           :src="`${IMGS_BASE_URL}/${icon}`"
           :alt="icon"

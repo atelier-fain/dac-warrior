@@ -1,1 +1,0 @@
-import{a1 as t,Y as e,_ as n,aa as s,a6 as o,V as r}from"./index-DqpaE2qz.js";const _={__name:"MainButton",props:{label:String},setup(a){return(c,l)=>(e(),t(r,{"no-caps":"","no-wrap":"",class:"main-button"},{default:n(()=>[s(o(a.label),1)]),_:1}))}};export{_};
