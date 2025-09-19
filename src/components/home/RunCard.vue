@@ -2,7 +2,7 @@
   <div class="run-card">
     <q-img
       class="main-img"
-      :src="img"
+      :src="`${IMGS_BASE_URL}/${img}`"
       :alt="img"
     />
     <q-img class="overlay"
@@ -17,7 +17,7 @@
       <div class="bottom">
         <q-img
           class="icon"
-          :src="icon"
+          :src="`${IMGS_BASE_URL}/${icon}`"
           :alt="icon"
         />
         <span class="text-white font-montserrat bold">{{ text }}</span>
@@ -33,6 +33,8 @@
 
 <script setup>
 import MainButton from 'components/MainButton.vue';
+import { IMGS_BASE_URL } from '../../boot/axios.js'
+
 const props = defineProps({
   img: String,
   title: String,

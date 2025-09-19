@@ -25,7 +25,7 @@
             avatar>
             <q-img
               class="flag"
-              :src="`${id}.svg`"
+              :src="`${IMGS_BASE_URL}/${id}.svg`"
               :alt="id"/>
             <span :class="id === selectedLang && 'selected-lang'">{{ id }}</span>
           </q-item-section>
@@ -38,6 +38,7 @@
 <script setup>
 
 import {ref} from "vue";
+import { IMGS_BASE_URL } from '../boot/axios.js'
 
 const props = defineProps({
   selectedLang: String,

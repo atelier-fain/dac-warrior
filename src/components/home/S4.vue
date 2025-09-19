@@ -10,7 +10,7 @@
         <div class="item"
              v-for="{id, logo} in storeData.listS4"
              :key="`${id}-s4`">
-          <q-img :src="logo"
+          <q-img :src="`${IMGS_BASE_URL}/${logo}`"
                  :alt="logo"/>
           <div class="text">
             <h2 class="title font-norse bold text-yellow">
@@ -27,6 +27,7 @@
 
 <script setup>
 import {useDataStore} from "/src/stores/data.js";
+import { IMGS_BASE_URL } from '../../boot/axios.js';
 
 const storeData = useDataStore()
 const props = defineProps({

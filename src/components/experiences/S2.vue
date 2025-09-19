@@ -13,7 +13,7 @@
           :key="`${id}-experiences-s2`"
           class="item">
           <div class="title">
-            <q-img :src="`${img}`"
+            <q-img :src="`${IMGS_BASE_URL}/${img}`"
                    :alt="img"
             />
             <span class="text font-norse bold text-white">
@@ -146,6 +146,7 @@
 </template>
 
 <script setup>
+import { IMGS_BASE_URL } from '../../boot/axios.js'
 import MainButton from 'components/MainButton.vue';
 const props = defineProps({
   content: Object,
