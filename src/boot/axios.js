@@ -17,9 +17,9 @@ export default defineBoot(({ app }) => {
   IMGS_BASE_URL =
     process.env.NODE_ENV === 'production'
       ? hostname === 'atelier-fain.github.io'
-        ? '/dac-warrior/'
+        ? '/dac-warrior'
         : '/'
-      : '/'
+      : ''
 
   app.config.globalProperties.$axios = axios
   // ^ ^ ^ this will allow you to use this.$axios (for Vue Options API form)
@@ -30,4 +30,4 @@ export default defineBoot(({ app }) => {
   //       so you can easily perform requests against your app's API
 })
 
-export { api }
+export { api, IMGS_BASE_URL }

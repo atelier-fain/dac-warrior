@@ -38,6 +38,7 @@
 <script setup>
 
 import {ref} from "vue";
+import { IMGS_BASE_URL } from '../boot/axios.js'
 
 const props = defineProps({
   selectedLang: String,
