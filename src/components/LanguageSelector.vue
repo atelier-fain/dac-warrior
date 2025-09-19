@@ -25,7 +25,7 @@
             avatar>
             <q-img
               class="flag"
-              :src="`/${id}.svg`"
+              :src="`/public/${id}.svg`"
               :alt="id"/>
             <span :class="id === selectedLang && 'selected-lang'">{{ id }}</span>
           </q-item-section>
