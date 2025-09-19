@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{Y as t,Z as o}from"./index-B-PKtGFq.js";const r={},s={class:"registration-page"};function c(n,a){return o(),t("div",s)}const f=e(r,[["render",c]]);export{f as default};
