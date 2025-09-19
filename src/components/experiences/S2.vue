@@ -13,7 +13,7 @@
           :key="`${id}-experiences-s2`"
           class="item">
           <div class="title">
-            <q-img :src="`/${img}`"
+            <q-img :src="`${img}`"
                    :alt="img"
             />
             <span class="text font-norse bold text-white">

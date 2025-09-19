@@ -27,7 +27,7 @@ const currentLanguage = computed(() => contentStore.currentLanguage)
 
 
 function handleLang (lang) {
-  console.log(lang)
+
   if (lang !== currentLanguage.value) {
     const routeName = contentStore.currentLanguage === 'en'
       ? route.name.replace(/-en\/?$/, '')
