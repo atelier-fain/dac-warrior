@@ -8,7 +8,7 @@
     <div class="container">
       <div class="list">
         <div class="item"
-             v-for="{id, logo} in storeData.listS4"
+             v-for="{id, logo} in storeData.home?.listS4"
              :key="`${id}-s4`">
           <q-img :src="`${IMGS_BASE_URL}/${logo}`"
                  :alt="logo"/>

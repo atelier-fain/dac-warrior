@@ -6,17 +6,21 @@
       alt="bg-s8"
     />
     <div class="container">
-      <h2 class="text-yellow">{{ content?.title }}</h2>
-      <p class="subtitle text-white">{{ content?.subtitle }}</p>
-      <div class="list">
-        <div class="item"
-             v-for="{id} in list"
-             :key="`${id}-s8`" >
-          <q-img src="../../assets/icon-item-s8.svg"
-                 alt="logo-item-s8"
-          />
-          <p class="text-white">{{ content?.list?.[id] }}</p>
-        </div>
+      <div class="section-a">
+        <h2 class="text-yellow">{{ content?.section_a?.title }}</h2>
+        <span class="subtitle text-yellow font-norse bold">
+          {{ content?.section_a?.subtitle }}
+        </span>
+        <p class="text-white">{{ content?.section_a?.p }}</p>
+      </div>
+      <div class="section-b">
+        <h2 class="text-yellow">{{ content?.section_b?.title }}</h2>
+        <span class="subtitle text-yellow font-norse bold">
+          {{ content?.section_b?.subtitle }}
+        </span>
+        <p class="text-white">{{ content?.section_b?.p1 }}</p>
+        <br>
+        <p class="text-white">{{ content?.section_b?.p2 }}</p>
       </div>
       <MainButton
         :label="content?.button"
@@ -59,27 +63,25 @@ const props = defineProps({
   .container {
     padding-top: 100px;
     padding-bottom: 70px;
-    > h2 {
-      margin-bottom: 20px;
-    }
-    .subtitle {
-      margin-bottom: 20px;
-      display: block;
-      max-width: 500px;
-    }
-    .list {
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    .section-a {
       margin-bottom: 80px;
-      .item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        .q-img {
-          max-width: 40px;
-        }
+    }
+    .section-b {
+      margin-bottom: 40px;
+    }
+    .section-a, .section-b {
+      max-width: 500px;
+      > h2 {
+        line-height: 100%;
+      }
+      > .subtitle {
+        font-size: 30px;
+        line-height: 100%;
+        display: block;
+        margin-bottom: 30px;
+      }
+      > p {
+        display: block;
 
       }
     }
@@ -90,8 +92,7 @@ const props = defineProps({
         text-transform: uppercase;
       }
     }
+
   }
 }
-
-
 </style>

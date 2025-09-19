@@ -34,108 +34,154 @@
           src="../../assets/bg-sub-section2-experiences.png"
           alt="bg-sub-section2-experiences"
         />
-        <div class="container-sub-section">
+        <div class="container-sub-section section-1">
           <div class="title-section">
-            <h2 class="text-yellow text-center">{{ content?.subSectionCard?.title }}</h2>
-            <span class="text-white subtitle text-center">{{ content?.subSectionCard?.subtitle }}</span>
+            <h2 class="text-yellow text-center">{{ content?.subSectionCard?.section_1?.title }}</h2>
+            <span class="text-yellow subtitle text-center font-norse bold">{{ content?.subSectionCard?.section_1?.subtitle }}</span>
             <MainButton
-              :label="content?.subSectionCard?.button"
+              :label="content?.subSectionCard?.section_1?.button"
             />
-            <p class="text-white text-center">{{ content?.subSectionCard?.p }}</p>
+            <p class="text-white text-center">{{ content?.subSectionCard?.section_1?.p }}</p>
           </div>
           <div class="list-section-top">
-            <h3 class="text-white text-center">{{ content?.subSectionCard?.listSectionTop?.title }}</h3>
             <div class="list">
               <div class="item"
-                  v-for="{id} in sectionCard?.listSectionTop"
-                   :key="`${id}-listSectionTop`">
+                  v-for="key in Object.keys(content?.subSectionCard?.section_1?.listSectionTop?.list)"
+                   :key="`${key}-listSectionTop`">
                 <q-img src="../../assets/logo-circle.svg"
                        alt="logo-circle"
                 />
-                <div class="text">
-                  <div class="bold text-white">{{ content?.subSectionCard?.listSectionTop?.[id]?.bold }} <span
-                    class="normal text-white"
-                    v-show="content?.subSectionCard?.listSectionTop?.[id]?.normal">
-                    {{ content?.subSectionCard?.listSectionTop?.[id]?.normal }}</span>
-                  </div>
-                </div>
+                <span class="text text-white" v-html="content?.subSectionCard?.section_1?.listSectionTop?.list?.[key]" />
+
               </div>
             </div>
           </div>
-          <div class="section-schedule">
+          <div class="section-prices">
             <h3 class="text-white text-center">
-              {{ content?.subSectionCard?.sectionSchedule?.title}}
+              {{ content?.subSectionCard?.section_1?.prices?.title}}
             </h3>
-            <div class="section-day friday">
+            <p class="text-white text-center subtitle">
+              {{ content?.subSectionCard?.section_1?.prices?.p }}
+            </p>
+            <div class="section-day price-1">
               <span class="title-section text-white text-center">
-                {{ content?.subSectionCard?.sectionSchedule?.friday.title }}
+                {{ content?.subSectionCard?.section_1?.prices?.price_1?.title }}
+              </span>
+              <br>
+              <span class="subtitle-section text-yellow text-center">
+               {{ content?.subSectionCard?.section_1?.prices?.price_1?.subtitle }}
               </span>
               <div class="list">
                 <div class="text-center container-details">
-                  <div v-for="{id} in sectionCard?.sectionSchedule?.friday"
-                       :key="`${id}-friday`">
+                  <div v-for="key in Object.keys(content?.subSectionCard?.section_1?.prices?.price_1?.list)"
+                       :key="`${key}-price-1`">
                     <span class="range text-center text-white">
-                       {{ content?.subSectionCard?.sectionSchedule?.friday?.[id]?.range }}
+                       {{ content?.subSectionCard?.section_1?.prices?.price_1?.list?.[key]?.bold }}
                     </span>
-                    <p class="text-center text-white">{{ content?.subSectionCard?.sectionSchedule?.friday?.[id]?.p1 }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section-day saturday">
-              <span class="title-section text-white text-center">
-                {{ content?.subSectionCard?.sectionSchedule?.saturday?.title }}
-              </span>
-              <div class="list">
-                <div class="text-center container-details">
-                  <div v-for="{id, p} in sectionCard?.sectionSchedule?.saturday"
-                       :key="`${id}-friday`">
-                <span class="range text-center text-white">
-                  {{ content?.subSectionCard?.sectionSchedule?.saturday?.[id]?.range }}
-                </span>
-                    <p class="text-center text-white"
-                       v-for="i in p"
-                       :key="`${i}-p-saturday`">
-                      {{ content?.subSectionCard?.sectionSchedule?.saturday?.[id]?.[`p${i}`] }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section-day sunday">
-              <span class="title-section text-white text-center">
-                {{ content?.subSectionCard?.sectionSchedule?.sunday.title }}
-              </span>
-              <div class="list">
-                <div class="text-center container-details">
-                  <div v-for="{id} in sectionCard?.sectionSchedule?.sunday"
-                       :key="`${id}-friday`">
-                    <span class="range text-center text-white">
-                       {{ content?.subSectionCard?.sectionSchedule?.sunday?.[id]?.range }}
-                    </span>
-                    <p class="text-center text-white">{{ content?.subSectionCard?.sectionSchedule?.sunday?.[id]?.p1 }}</p>
+                    <p class="text-center text-white">{{ content?.subSectionCard?.section_1?.prices?.price_1?.list?.[key]?.normal }}</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="info">
-            <h3 class="text-white text-center">{{ content?.subSectionCard?.info?.title }}</h3>
+          <div class="section-benefits">
+            <h3 class="title text-white text-center">
+              {{ content?.subSectionCard?.section_1?.includedBenefits?.title }}
+            </h3>
+            <div class="list">
+              <div class="item">
+                <q-img src="../../assets/logo-circle.svg"
+                       alt="logo"
+                />
+                <p class="text-white">{{ content?.subSectionCard?.section_1?.includedBenefits?.p1 }}</p>
+              </div>
+              <div class="item">
+                <q-img src="../../assets/logo-circle.svg"
+                       alt="logo"
+                />
+                <p class="text-white">{{ content?.subSectionCard?.section_1?.includedBenefits?.p2 }}</p>
+              </div>
+              <div class="item">
+                <q-img src="../../assets/logo-circle.svg"
+                       alt="logo"
+                />
+                <p class="text-white">{{ content?.subSectionCard?.section_1?.includedBenefits?.p3 }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-sub-section section-2">
+          <div class="title-section">
+            <h2 class="text-yellow text-center">{{ content?.subSectionCard?.section_2?.title }}</h2>
+            <span class="text-yellow subtitle text-center font-norse bold">{{ content?.subSectionCard?.section_2?.subtitle }}</span>
+            <MainButton
+              :label="content?.subSectionCard?.section_2?.button"
+            />
+            <p class="text-white text-center">{{ content?.subSectionCard?.section_2?.p }}</p>
+          </div>
+          <div class="list-section-top">
             <div class="list">
               <div class="item"
-                   v-for="{id} in sectionCard?.info"
-                   :key="`${id}-info`"
-                   :class="id === 'c4' && 'special'">
+                  v-for="key in Object.keys(content?.subSectionCard?.section_2?.listSectionTop?.list)"
+                   :key="`${key}-listSectionTop`">
                 <q-img src="../../assets/logo-circle.svg"
                        alt="logo-circle"
                 />
-                <div class="text">
-                  <div class="bold text-white">{{ content?.subSectionCard?.info?.[id]?.bold }} <span
-                    class="normal text-white"
-                    v-show="content?.subSectionCard?.info?.[id]?.normal">
-                    {{ content?.subSectionCard?.info?.[id]?.normal }}</span>
+                <span class="text text-white" v-html="content?.subSectionCard?.section_2?.listSectionTop?.list?.[key]" />
+
+              </div>
+            </div>
+          </div>
+          <div class="section-prices">
+            <h3 class="text-white text-center">
+              {{ content?.subSectionCard?.section_2?.prices?.title}}
+            </h3>
+            <p class="text-white text-center subtitle">
+              {{ content?.subSectionCard?.section_2?.prices?.p }}
+            </p>
+            <div class="section-day price-1">
+              <span class="title-section text-white text-center">
+                {{ content?.subSectionCard?.section_2?.prices?.price_1?.title }}
+              </span>
+              <br>
+              <span class="subtitle-section text-yellow text-center">
+               {{ content?.subSectionCard?.section_2?.prices?.price_1?.subtitle }}
+              </span>
+              <div class="list">
+                <div class="text-center container-details">
+                  <div v-for="key in Object.keys(content?.subSectionCard?.section_2?.prices?.price_1?.list)"
+                       :key="`${key}-price-1-s2`">
+                    <span class="range text-center text-white">
+                       {{ content?.subSectionCard?.section_2?.prices?.price_1?.list?.[key]?.bold }}
+                    </span>
+                    <p class="text-center text-white">{{ content?.subSectionCard?.section_2?.prices?.price_1?.list?.[key]?.normal }}</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-benefits">
+            <h3 class="title text-white text-center">
+              {{ content?.subSectionCard?.section_2?.includedBenefits?.title }}
+            </h3>
+            <div class="list">
+              <div class="item">
+                <q-img src="../../assets/logo-circle.svg"
+                       alt="logo"
+                />
+                <p class="text-white">{{ content?.subSectionCard?.section_2?.includedBenefits?.p1 }}</p>
+              </div>
+              <div class="item">
+                <q-img src="../../assets/logo-circle.svg"
+                       alt="logo"
+                />
+                <p class="text-white">{{ content?.subSectionCard?.section_2?.includedBenefits?.p2 }}</p>
+              </div>
+              <div class="item">
+                <q-img src="../../assets/logo-circle.svg"
+                       alt="logo"
+                />
+                <p class="text-white">{{ content?.subSectionCard?.section_2?.includedBenefits?.p3 }}</p>
               </div>
             </div>
           </div>
@@ -150,8 +196,7 @@ import { IMGS_BASE_URL } from '../../boot/axios.js'
 import MainButton from 'components/MainButton.vue';
 const props = defineProps({
   content: Object,
-  list: Array,
-  sectionCard: Object
+  list: Array
 })
 </script>
 
@@ -215,6 +260,7 @@ const props = defineProps({
       margin: 0 auto;
       width: 100%;
       display: flex;
+      flex-direction: column;
       .bg-image-subsection {
         position: absolute;
         top: 0;
@@ -230,14 +276,18 @@ const props = defineProps({
         width: 100%;
         padding: 60px 20px;
         .title-section {
+          margin-bottom: 30px;
+          > h2 {
+            line-height: 100%;
+          }
           .subtitle {
-            font-size: 25px;
-            font-weight: 900;
+            font-size: 30px;
             display: block;
+            line-height: 100%;
           }
           .main-button {
             display: flex;
-            margin: 20px auto 40px;
+            margin: 50px auto;
             .q-btn__content {
               text-transform: uppercase;
             }
@@ -250,59 +300,64 @@ const props = defineProps({
           }
         }
         .list-section-top {
-          > h3 {
-            margin-top: 40px;
-            margin-bottom: 40px;
-          }
           > .list {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             margin: 0 auto;
-            max-width: 700px;
-            gap: 30px;
+            max-width: 800px;
+            gap: 60px;
+            row-gap: 20px;
             > .item {
               display: flex;
               align-items: flex-start;
               gap: 20px;
-              max-width: 305px;
+              max-width: 380px;
               > .q-img {
                 min-width: 40px;
                 max-width: 40px;
               }
               > .text {
-                display: flex;
-                align-items: flex-start;
-                .bold {
-                  padding-top: 5px;
-                  font-size: 16px;
-                  .normal {
-                    font-weight: 400;
-                    line-height: 100%;
-                  }
+                font-size: 16px;
+                padding-top: 5px;
+                > strong {
+                  font-weight: 900;
                 }
               }
             }
           }
         }
-        .section-schedule {
+        .section-prices {
           margin-bottom: 80px;
           display: block;
-          > h3 {
-            margin: 40px 0;
+          > .subtitle {
+            display: block;
+            max-width: 650px;
+            margin: 40px auto;
           }
           .section-day {
             text-align: center;
             margin-bottom: 40px;
-            .title-section {
+            .title-section, .subtitle-section {
               font-size: 25px;
               font-weight: 900;
+              line-height: 100%;
             }
+            .subtitle-section {
+              margin-bottom: 10px;
+              display: block;
+            }
+
             > .list {
              > .container-details {
                 display: flex;
                 flex-direction: column;
-                gap: 25px;
+                gap: 5px;
+               > div {
+                 display: flex;
+                 flex-direction: column;
+                 gap: 5px;
+               }
                 .range {
                   font-size: 18px;
                   font-weight: 900;
@@ -311,44 +366,33 @@ const props = defineProps({
             }
           }
         }
-        .info {
+        .section-benefits {
           > h3 {
-            margin-top: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
           }
           > .list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto auto;
-            margin: 0 auto;
-            max-width: 800px;
-            gap: 30px;
-            > .item.special {
-              grid-column: 2 / 2;
-              grid-row: 2 / 4;
-            }
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
             > .item {
+              width: 100%;
               display: flex;
-              align-items: flex-start;
-              gap: 20px;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
               > .q-img {
-                min-width: 40px;
-                max-width: 40px;
+                max-width: 20px;
               }
-              > .text {
-                display: flex;
-                align-items: flex-start;
-                > .bold {
-                  padding-top: 5px;
-                  font-size: 16px;
-                  > .normal {
-                    font-weight: 400;
-                    line-height: 100%;
-                  }
-                }
+              > p {
+                font-weight: 900;
+                font-size: 18px;
               }
             }
           }
+
         }
       }
     }

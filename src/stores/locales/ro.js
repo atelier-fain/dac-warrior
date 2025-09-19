@@ -120,33 +120,48 @@ const ro = {
       button: 'Află mai multe'
     },
     s8: {
-      title: 'pachetul Războinicului',
-      subtitle: 'Războinicii au nevoie de un festin pe măsura după ce au trecut cu izbândă peste obstacolele ce le-au ieșit în cale. Participanții pot cumpăra un pachet care include:',
-      list: {
-        c1: 'Înscriere la cursă',
-        c2: 'Acces la degustare de vinuri (Tohani, Ceptura, Valea    Călugărească)',
-        c3: 'Vizită Ghidată pe toată podgoria Dealu Mare',
-        c4: 'Prânz Tradițional după cursă'
+      section_a: {
+        title: 'Pachetul străjerului',
+        subtitle: '(1 NOAPTE: 22 – 23 MAI 2026 SAU 23 – 24 MAI 2026)',
+        p: 'O experiență scurtă și intensă. Pentru cei care vor să își testeze limitele la Dac Warrior, bucurându-se de bucate tradiționale înainte și după cursă',
+      },
+      section_b: {
+        title: 'Pachetul războinicului',
+        subtitle: '(2 NOPȚI: 22 – 24 MAI 2026)',
+        p1: 'O aventură pe cinste, unde te vei bucura de un pachet complet, care îți asigură posibilitatea de cazare, mâncare, acces la facilitățile Dac Warrior timp de 2 nopți. Îți vei descoperi limitele, dar te vei alătura și unei comunități frumoase și autentice.',
+        p2: 'Pentru cei care își doresc o experiență completă, cu mai mult timp pentru relaxare și aventură.'
       },
       button: 'Află mai multe'
     },
     s9: {
-      s1: {
-        title: 'FESTIVALUL VINULUI',
-        p1: 'Festivalul Vinului este locul unde războinicii se adună sub cerul liber pentru a celebra cu foc aprins, mese tradiționale românești, vinuri alese și povești nemuritoare despre mituri, zei și lupte străvechi.',
-        p2: 'În mijlocul naturii, la lumina focului, timpul încetinește. Muzica live, râsetele și clinchetul paharelor se împletesc într-o atmosferă de voie bună și camaraderie. Este un prilej rar de relaxare autentică, unde gustul vinului întâlnește gustul victoriei și legătura cu rădăcinile se întărește în fiecare înghițitură.',
-        p3: 'Aici nu e doar un festival. Este o întoarcere la esență, la bucuria simplă de a trăi, a împărți și a simți.'
-      },
-      s2: {
-        title: 'IN FIECARE WEEKEND IN SATUL DACIC',
-        p1: 'Vino la Festivalul Vinului și te bucuri de un weekend memorabil. Iată ce ți-am pregătit:',
-        i1: 'foc de tabără,',
-        i2: 'mese tradiționale românești,',
-        i3: 'povești despre mituri și lupte,',
-        i4: 'degustări, muzică și relaxare în aer liber.',
+      title: 'Weekend în satul dacilor',
+      list: {
+        p1: {
+          bold: 'Descoperă un colț de autenticitate la fiecare sfârșit de săptămână, pe domeniul Satului Dacilor.',
+          normal: 'Aici, tradiția se împletește cu aventura și bucuria de a fi în mijlocul naturii:'
+        },
+        p2: {
+          bold: 'Cazare rustică și confortabilă',
+          normal: '– în camere primitoare sau în camping'
+        },
+        p3: {
+          bold: 'Antrenamente pe trasee cu obstacole',
+          normal: '– pentru cei care își doresc provocări fizice și mentale.'
+        },
+        p4: {
+          bold: 'Bucate tradiționale',
+          normal: '– preparate la Punctul Gastronomic Local, cu rețete autentice și ingrediente 100% locale.'
+        },
+        p5: {
+          bold: 'Trasee cu bicicletele ',
+          normal: '– prin peisaje încântătoare descoperind frumusețea locului.'
+        },
+        p6: {
+          bold: 'Vizite la podgorii ',
+          normal: '– explorează Dealul Mare, una dintre cele mai renumite regiuni viticole din România.'
+        }
       }
     }
-
   },
   experiencesPage: {
     s1: {
@@ -178,258 +193,85 @@ const ro = {
 
       },
       subSectionCard: {
-        title: 'FESTIVALUL VINULUI',
-        subtitle: 'În fiecare weekend',
-        button: 'Vreau Experiența',
-        p: 'Întoarce-te la bucuria simplă de a trăi, a împărți și a simți. Totul printr-o experiență de neuitat.',
-        listSectionTop: {
-          title: 'ţI-AM PREGĂTIT:',
-          c1: {
-            bold: 'Mese Autentice Românești',
-            normal: '(în Satul Dacic)'
+        section_1: {
+          title: 'Pachetul străjerului',
+          subtitle: '(1 NOAPTE: 22 – 23 MAI 2026 SAU 23 – 24 MAI 2026)',
+          button: 'Vreau Experiența',
+          p: 'O experiență scurtă și intensă. Pentru cei care vor să își testeze limitele la Dac Warrior, bucurându-se de bucate tradiționale înainte și după cursă.',
+          listSectionTop: {
+            list: {
+              c1: `<strong>Cazare pentru 1 noapte</strong> în cort sau camper, cu toate utilitățile incluse.`,
+              c2: `<strong>Prânz și cină pe alese</strong> meniu complet cu <strong>felul 1 + felul 2</strong>, preparate tradiționale la Punctul Gastronomic Local.`,
+              c3: `<strong>Mic dejun tip bufet suedez</strong>`,
+              c4: `<strong>Intrarea se face cu cina, iar ieșirea cu prânz.</strong>`
+            }
           },
-          c2: {
-            bold: 'Degustări de Băuturi Tradiționale'
+          prices: {
+            title: 'Tarife și facilităţi pachet:',
+            p: 'O experiență scurtă și intensă. Pentru cei care vor să își testeze limitele la Dac Warrior, bucurându-se de bucate tradiționale înainte și după cursă.',
+            price_1: {
+              title: 'Tarif adult:',
+              subtitle: '350 lei/persoană',
+              list: {
+                s1: {
+                  bold: 'Tarif copii sub 12 ani: 50% din tariful de adult',
+                  normal: 'Copiii sub 7 ani beneficiază de gratuitate\n'
+                },
+                s2: {
+                  bold: 'Important: tariful nu include cortul.',
+                  normal: 'Fiecare participant își aduce propriul cort.'
+                }
+              }
+            },
           },
-          c3: {
-            bold: 'Tur Ghidat pe Drumul Vinului',
-            normal: '(cu degustări)'
-          },
-          c4: {
-            bold: 'Foc de Tabără'
-          },
-          c5: {
-            bold: 'Cazare inclusă în Satul Dacilor',
-          },
-          c6: {
-            bold: 'Experiențe culinare pe drumul vinului'
+          includedBenefits: {
+            title: 'Beneficii incluse în tarif:',
+            p1: 'Acces și explorare pe traseele de antrenament Dac Warrior',
+            p2: 'Acces la traseele de mountain bike',
+            p3: 'Antrenament ghidat cu instructor pe traseele Dac Warrior'
           }
         },
-        sectionSchedule: {
-          title: 'PROGRAM:',
-          friday: {
-            title: 'Vineri',
-            s1: {
-              range: '18:00 – 19:30',
-              p1: 'Check-in la Casa din Satul Dacilor'
-            },
-            s2: {
-              range: '19:30 – 10:30',
-              p1: 'Cină Autentică la Restaurant'
+        section_2: {
+          title: 'Pachetul războinicului',
+          subtitle: '(2 NOPȚI: 22 – 24 MAI 2026)',
+          button: 'Vreau Experiența',
+          p: 'O aventură pe cinste, unde te vei bucura de un pachet complet, care îți asigură posibilitatea de cazare, mâncare, acces la facilitățile Dac Warrior timp de 2 nopți. Îți vei descoperi limitele, dar te vei alătura și unei comunități frumoase și autentice.',
+          listSectionTop: {
+            list: {
+              c1: `<strong>Cazare pentru 2 nopți</strong> în cort sau camper, cu toate utilitățile incluse.`,
+              c2: `<strong>Prânz și cină pe alese</strong> meniu complet cu <strong>felul 1 + felul 2</strong>, preparate tradiționale la Punctul Gastronomic Local.`,
+              c3: `<strong>Mic dejun tip bufet suedez</strong>`,
+              c4: `<strong>Intrarea se face cu cina, iar ieșirea cu prânz.</strong>`
             }
           },
-          saturday: {
-            title: 'Sâmbătă',
-            s1: {
-              range: '9:30 – 10:30',
-              p1: 'Mic Dejun Dacic la Restaurant'
+          prices: {
+            title: 'Tarife și facilităţi pachet:',
+            p: 'O experiență scurtă și intensă. Pentru cei care vor să își testeze limitele la Dac Warrior, bucurându-se de bucate tradiționale înainte și după cursă.',
+            price_1: {
+              title: 'Tarif adult:',
+              subtitle: '700 lei/persoană',
+              list: {
+                s1: {
+                  bold: 'Tarif copii sub 12 ani: 50% din tariful de adult',
+                  normal: 'Copiii sub 7 ani beneficiază de gratuitate\n'
+                },
+                s2: {
+                  bold: 'Important: tariful nu include cortul.',
+                  normal: 'Fiecare participant își aduce propriul cort.'
+                }
+              }
             },
-            s2: {
-              range: '10:30 – 12:30',
-              p1: 'Hiking organizat pe Drumul Vinului'
-            },
-            s3: {
-              range: '12:30 – 14:00',
-              p1: 'Degustare de Vinuri la Cramă.',
-              p2: 'Festin de Prânz.',
-              p3: 'Papanași delicioși ca desert.'
-            },
-            s4: {
-              range: '14:00 – 16:00',
-              p1: 'Continuarea călătoriei pe Drumul Vinului.',
-              p2: 'Degustări la Crame.',
-              p3: 'Istoric Tohani.'
-            },
-            s5: {
-              range: '16:00 – 17:00',
-              p1: 'Întoarcere în Satul Dacic'
-            },
-            s6: {
-              range: '17:00 – 19:00',
-              p1: 'Liber.',
-              p2: 'Explorare Satul Dacic.',
-              p3: 'Relaxare la Casă.',
-              p4: 'Fiecare se bucură de puțin timp în natură.'
-            },
-            s7: {
-              range: '19:00 – 21:00',
-              p1: 'Festinul Dacic la Restaurant.',
-              p2: 'Foc de tabără.',
-              p3: 'Povești autentice.'
-            }
-
           },
-          sunday: {
-            title: 'Duminică',
-            s1: {
-              range: '8:30 – 10:30',
-              p1: 'Mic Dejun Autentic cu preparate speciale'
-            },
-            s2: {
-              range: 'după 10:30',
-              p1: 'Ne revedem curând.'
-            }
-
-          }
-        },
-        info: {
-          title: 'InformAţii Utile:',
-          c1: {
-            bold: 'Pachetul asigură 5 mese ',
-            normal: '(4 în Satul Dacic și una la cramă)'
-          },
-          c2: {
-            bold: 'Te vei bucura de minimum 2 degustări de vin, în locații diferite'
-          },
-          c3: {
-            bold: 'Turul pe Drumul Vinului este mereu ghidat. Vei afla povestea fiecărei zone.'
-          },
-          c4: {
-            bold: 'Traseul nu este mereu același. Acesta are loc în Tohani, însă obiectivele se pot schimba, în funcție de disponibilitatea cramelor și ghid.',
-            normal: 'Experiența, însă, rămâne la superlativ, plină de momente memorabile.'
-          },
-          c5: {
-            bold: 'Cazarea este asigurată doar în casele din Satul Dacilor și este disponibilă pentru 2 persoane.',
-            normal: 'Fiecare casă este spațiu exclusiv pentru 2 persoane.'
+          includedBenefits: {
+            title: 'Beneficii incluse în tarif:',
+            p1: 'Acces și explorare pe traseele de antrenament Dac Warrior',
+            p2: 'Acces la traseele de mountain bike',
+            p3: 'Antrenament ghidat cu instructor pe traseele Dac Warrior'
           }
         }
+
       }
     },
-    s3: {
-      card_a: {
-        title: 'ZIUA VINULUI',
-        subtitle: 'Doar o zi liberă? Alege sâmbăta!',
-        p: 'Dacă nu poți rămâne tot weekendul, te așteptăm sâmbătă să trăiești intens toată magia Drumul Vinului într-o singură zi. Degustări, peisaje, povești și voie bună, concentrate într-o experiență autentică de neuitat.',
-        sectionSchedule: {
-          saturday: {
-            title: 'Sâmbătă',
-            s1: {
-              range: '9:30 – 10:30',
-              p1: 'Mic Dejun Dacic la Restaurant'
-            },
-            s2: {
-              range: '10:30 – 12:30 ',
-              p1: 'Hiking organizat pe Drumul Vinului'
-            },
-            s3: {
-              range: '12:30 – 14:00',
-              p1: 'Degustare de Vinuri la Cramă.',
-              p2: 'Festin de Prânz.',
-              p3: 'Papanași delicioși ca desert.',
-            },
-            s4: {
-              range: '14:00 – 16:00',
-              p1: 'Continuarea călătoriei pe Drumul Vinului.',
-              p2: 'Degustări la Crame.',
-              p3: 'Istoric Tohani.'
-            },
-            s5: {
-              range: '16:00 – 17:00 ',
-              p1: 'Întoarcere în Satul Dacic'
-            },
-            s6: {
-              range: '17:00 – 19:00',
-              p1: 'Festin special cu mâncare tradițională doar pentru grupurile de o zi.'
-            },
-
-          }
-        }
-      },
-      card_b: {
-        title: 'PACHETUL RĂZBOINICULUI',
-        button: 'Vreau Experiența',
-        p1: 'Vrei ca Dac Warrior să fie mai mult decât o cursă? Alege să trăiești experiența completă a unui adevărat războinic!',
-        p2: 'Combină provocarea fizică cu tradiția locului, gustă din vinurile zonei, bucură-te de festinul de după luptă și lasă-te purtat prin poveștile pământului strămoșesc.',
-        p3: 'Transformă-ți participarea într-o aventură memorabilă, cu gust, cu suflet, cu sens.',
-        list: {
-          c1: {
-            bold: 'Înscriere la Dac Warrior'
-          },
-          c2: {
-            bold: 'Mese Autentice Românești',
-            normal: '(în Satul Dacic)'
-          },
-          c3: {
-            bold: 'Degustare de Vinuri'
-          },
-          c4: {
-            bold: 'Cazare inclusă în Satul Dacilor'
-          },
-          c5: {
-            bold: 'Training Camp'
-          },
-          c6: {
-            bold: 'Foc de Tabără'
-          },
-          c7: {
-            bold: 'Vizitarea unei Crame'
-          },
-          c8: {
-            bold: 'Hiking pe Drumul Vinului'
-          }
-        },
-        sectionSchedule: {
-          title: 'PROGRAM:',
-          friday: {
-            title: 'Vineri',
-            s1: {
-              range: '12:30 – 14:00',
-              p1: 'Check-in și Festin Autentic la Restaurant'
-            },
-            s2: {
-              range: '14:00 – 16:00',
-              p1: 'Sesiune de Antrenament în Satul Dacilor'
-            },
-            s3: {
-              range: '16:00 – 20:00',
-              p1: 'Validarea înscrierilor și Ridicarea Kiturilor de Participare la Dac Warrior'
-            },
-            s4: {
-              range: '20:00 – 21:00',
-              p1: 'Festinul de seară la Restaurantul Dac Warrior'
-            }
-          },
-          saturday: {
-            title: 'Sâmbătă',
-            s1: {
-              range: '7:00 – 15:00',
-              p1: 'Desfășurare Dac Warrior'
-            },
-            s2: {
-              range: '15:00 – 16:00',
-              p1: 'Festivitatea de Premiere Dac Warrior'
-            },
-            s3: {
-              range: '16:00 – 18:00',
-              p1: 'Socializare, băuturi din partea casei și gustări'
-            },
-            s4: {
-              range: '18:00 – 21:00',
-              p1: 'Festinul de seară la Restaurant, socializare, refacere, Foc de Tabără.'
-            }
-          },
-          sunday: {
-            title: 'Duminică',
-            s1: {
-              range: '9:00 – 11:00',
-              p1: 'Alergare de Revenirie (la alegere)'
-            },
-            s2: {
-              range: '11:00 – 12:00',
-              p1: 'Gustare Dacică la Restaurant'
-            },
-            s3: {
-              range: '12:00 – 16:00',
-              p1: 'Vizitarea unei Crame. Degustare de Vinuri. Papanași.'
-            },
-            s4: {
-              range: '16:00',
-              p1: 'See you next year.'
-            }
-          }
-        }
-      }
-    }
   }
 }
 

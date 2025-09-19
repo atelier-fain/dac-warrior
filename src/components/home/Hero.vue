@@ -6,7 +6,7 @@
            muted
            playsinline
            class="bg-video">
-      <source src="../../assets/videos/montaj intro.mp4"
+      <source src="../../assets/videos/montaj intro2.mp4"
               type="video/mp4">
     </video>
     <div class="container">

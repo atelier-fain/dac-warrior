@@ -2,18 +2,14 @@
   <q-page class="home-page">
     <Hero :content="content?.titleSection" />
     <S2 :content="content?.s2" />
-    <S3 :list-cards="storeData?.listRuns"
+    <S3 :list-cards="storeData?.home?.listRuns"
         :content="content?.s3" />
     <S4 :content="content?.s4" />
     <S5 :content="content?.s5" />
     <S6 :content="content?.s6" />
     <S7 :content="content?.s7" />
-    <S8 :content="content?.s8"
-        :list="storeData?.listS8"
-    />
-    <S9 :content="content?.s9"
-        :list="storeData?.listS9"
-    />
+    <S8 :content="content?.s8" />
+    <S9 :content="content?.s9" />
   </q-page>
 </template>
 

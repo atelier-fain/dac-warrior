@@ -12,21 +12,21 @@
         />
         <div class="list">
           <div class="flex"
-               v-for="({id}, index) in store.navLinks"
-               :key="id">
+               v-for="(key, index) in Object.keys(locales)"
+               :key="key">
             <q-item
               clickable
               dense
               :role="null"
-              :active="`${id}-${currentLanguage}` === route.name"
+              :active="`${key}-${currentLanguage}` === route.name"
               tag="a"
-              @click.prevent="handleRoute(id)"
+              @click.prevent="handleRoute(key)"
               manual-focus>
-              <span class="label">{{ locales[id] }}</span>
+              <span class="label">{{ locales[key] }}</span>
 
             </q-item>
             <span
-              v-if="index + 1 !== store.navLinks.length"
+              v-if="index + 1 !== Object.keys(locales).length"
               class="separator">|</span>
           </div>
         </div>
@@ -37,8 +37,6 @@
 </template>
 
 <script setup>
-
-import {useDataStore} from "/src/stores/data.js";
 import {useContentStore} from "/src/stores/content.js";
 import {computed, ref} from "vue";
 import {useRouter, useRoute} from "vue-router";
@@ -46,7 +44,6 @@ import LanguageSelector from 'components/LanguageSelector.vue';
 const route = useRoute()
 
 const emit = defineEmits(['handle-lang'])
-const store = useDataStore()
 const contentStore = useContentStore()
 const router = useRouter()
 const locales = computed(() => contentStore.localizedContent?.mainLayout?.navLinks)

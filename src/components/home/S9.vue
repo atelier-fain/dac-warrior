@@ -6,36 +6,25 @@
       alt="bg-s9"
     />
     <div class="container">
+      <h2 class="text-yellow">{{ content?.title }}</h2>
       <div class="text">
-        <div class="s1">
-          <h2 class="text-yellow">{{ content?.s1?.title }}</h2>
-          <p class="text-white">{{ content?.s1?.p1 }}</p><br>
-          <p class="text-white">{{ content?.s1?.p2 }}</p><br>
-          <p class="text-white">{{ content?.s1?.p3 }}</p>
-        </div>
-        <div class="s2">
-          <h2 class="text-yellow">{{ content?.s2?.title }}</h2>
-          <p class="text-white">{{ content?.s2?.p1 }}</p>
-          <ul>
-            <li v-for="{id} in list"
-                :key="`${id}-s9`"
-                class="text-white font-montserrat">
-              {{ content?.s2?.[id]}}
-
-            </li>
-          </ul>
-        </div>
+        <p class="text-white"
+           v-for="key in Object.keys(content?.list)"
+           :key="`${key}-s9`">
+          <span class="bold">{{ content?.list?.[key]?.bold }}</span>
+          {{ content?.list?.[key]?.normal }}
+        </p>
       </div>
-      <q-img src="../../assets/map-s9.svg" alt="map-s9"/>
-
+      <q-img src="../../assets/map-s9.svg"
+             alt="map-s9"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  content: Object,
-  list: Array
+  content: Object
 })
 </script>
 
@@ -64,34 +53,16 @@ const props = defineProps({
   .container {
     padding-top: 100px;
     padding-bottom: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
+    > h2 {
+      margin-bottom: 20px;
+    }
     .text {
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 40px;
-      .s1, .s2 {
-        width: 47%;
-        h2 {
-          margin-bottom: 20px;
-
-        }
-        ul {
-          margin: 20px 0 0 0;
-          padding-left: 12px;
-          li {
-            font-size: 16px;
-          }
-        }
-      }
+      flex-direction: column;
+      gap: 20px;
+      max-width: 550px;
+      margin-bottom: 40px;
     }
-
   }
-
 }
-
-
 </style>
